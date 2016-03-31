@@ -7,7 +7,9 @@ function Albums() {
 }
 
 router.get('/albums', function(req, res, next) {
-  res.render('albums/index');
+  Albums().select().then(function(results) {
+    res.render('albums/index', {albums: results});
+  });
 });
 
 router.get('/albums/new', function(req, res, next) {

@@ -4,3 +4,15 @@ block content
   h1 Albums
 
   a(href="/albums/new") New Album
+
+  if albums
+    table
+      thead
+        tr
+          th Genre
+          th Artist
+          th Album
+      tbody
+        for album in albums
+          tr
+            td= album.name

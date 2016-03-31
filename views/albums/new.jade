@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 New Album
+
+  form(action="/albums", method="post")
+    div
+      Name
+      input(type="text" name="album_name")
+
+    div
+      input(type="submit")

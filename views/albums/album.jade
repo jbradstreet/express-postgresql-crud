@@ -2,16 +2,16 @@ extends ../layout
 
 block content
   if album
-    h1 Showing Album:
-      span= album.name
+    div.well.well-lg
+      h1 Showing Album:
+        span= album.name
 
-    p Genre:
-      span= album.genre
+      p Genre:
+        span= album.genre
 
-    p Artist:
-      span= album.artist
-
-    a(href='/albums/'+ album.id + '/edit') Edit
-
-    form(action='/albums/#{album.id}/delete' method='post')
-      button(value='Delete')
+      p Artist:
+        span= album.artist
+      p
+        a.btn-link(href='/albums/'+ album.id + '/edit') Edit
+        form(action='/albums/#{album.id}/delete' method='post')
+          input.btn.btn-link(value='Delete')

@@ -43,6 +43,12 @@ router.post('/albums/:id/edit', function(req, res, next) {
   });
 });
 
+router.post('/albums/:id/delete', function(req, res) {
+  Albums().where('id', req.params.id).del()
+  .then(function (result) {
+    res.redirect('/albums');
+  });
+});
 
 
 module.exports = router;

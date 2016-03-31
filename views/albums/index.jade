@@ -15,4 +15,6 @@ block content
       tbody
         for album in albums
           tr
-            td= album.name
+            td= album.genre
+            td= album.artist
+            td: a(href="/albums/"+album.id id="album.name")= album.name

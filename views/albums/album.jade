@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  if album
+    h1 Showing Album:
+      span= album.name
+
+    p Genre:
+      span= album.genre
+
+    p Artist:
+      span= album.artist
+
+    a(href='#') Edit
+
+    button(value='Delete')

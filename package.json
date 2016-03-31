@@ -12,6 +12,7 @@
     "express": "^4.13.4",
     "jade": "~1.11.0",
     "knex": "^0.10.0",
+    "method-override": "^2.3.5",
     "morgan": "~1.6.1",
     "pg": "^4.5.2",
     "serve-favicon": "~2.3.0"

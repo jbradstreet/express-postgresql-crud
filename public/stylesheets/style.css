@@ -6,3 +6,23 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container {
+  width: 50%;
+}
+
+.container h1 {
+  margin-bottom: 2em;
+}
+
+input[type="radio"] {
+  margin-right: 1em;
+}
+
+table {
+  margin-top: 3em;
+}
+
+.btn-link {
+  padding: 0px;
+}

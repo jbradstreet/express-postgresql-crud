@@ -1,0 +1,7 @@
+extends ../layout
+
+block content
+  if album
+    h1 Editing #{album.name}
+    form(action='/albums/#{album.id}/edit', _method='put' method='post')
+      include ./fields.jade

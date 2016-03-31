@@ -1,33 +1,8 @@
 extends ../layout
 
 block content
-  h1 New Album
 
-  form(action="/albums", method="post")
-    div
-      label Artist
-      input(type="text" name="artist_name")
-
-      label Album
-      input(type="text" name="album_name")
-
-      label Genre
-      select(name="genre")
-        option(value="jazz") Jazz
-        option(value="folk") Folk
-
-      label Stars
-        p 1
-        input(type="radio")
-        input(type="radio")
-        input(type="radio")
-        input(type="radio")
-        input(type="radio")
-        p 5
-
-      input(type="checkbox")
-      p Contains Explicit Lyrics
-
-    div
-      input(type="submit" value="Create Album")
-      a(href='/albums') cancel
+  div.container
+    h1 New Album
+    form(action='/albums' method='post')
+      include ./fields.jade

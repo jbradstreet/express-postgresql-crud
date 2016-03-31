@@ -11,6 +11,7 @@ block content
     p Artist:
       span= album.artist
 
-    a(href='#') Edit
+    a(href='/albums/'+ album.id + '/edit') Edit
 
-    button(value='Delete')
+    form(action='/albums/#{album.id}/delete' method='post')
+      button(value='Delete')

@@ -1,0 +1,36 @@
+div.form-group
+  label(for="artist") Artist
+  input.form-control(type="text" id="artist" name="artist" value= album.artist placeholder="Artist")
+div.form-group
+  label(for="album") Album
+  input.form-control(type="text" id="album" name="album" value= album.name placeholder="Album")
+div.form-group
+  label(for="genre") Genre
+  select.form-control(id="genre" name="genre")
+    option(value="jazz") Jazz
+    option(value="folk") Folk
+div.form-group
+  label Stars
+  div.checkbox
+    label
+      input(type="radio" name="rating" value="1" checked=(album.rating == 1 || !album.rating))
+      one 1
+
+    label
+      input(type="radio" name="rating" value="2" checked=(album.rating == 2))
+      two
+
+    label
+      input(type="radio" name="rating" value="3" checked=(album.rating == 3))
+      three
+
+    label
+      input(type="radio" name="rating" value="4" checked=(album ? (album.rating === 4 ? true : undefined): undefined))
+      four
+
+    label
+      input(type="radio" name="rating" value="4" checked=(album ? (album.rating === 5 ? true : undefined): undefined))
+      five 5
+
+div.form-group
+  button.btn.btn-primary(type="submit") Save
